@@ -73,10 +73,11 @@ ul.repo-list li {
 ul.repo-list li img {
     margin-top: 4px;
     margin-top: 10px;
+    width: 90%;
 
 }
 
-ul.repo-list li strong {
+li strong {
     font-size: 24px;
     color: #444;
 }
@@ -85,4 +86,20 @@ ul.repo-list li span {
     font-size: 12px;
     color: #999;
    
+}
+ul.github-list{
+    width: 100%;
+    list-style: none;
+  
+}
+ul.github-list strong{
+  margin: 0 auto;
+}
+ul.github-list li strong{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 7%;
+    max-width: 75ch;
+    
 }
