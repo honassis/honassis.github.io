@@ -9,7 +9,7 @@ repos.onreadystatechange = function() {
         data = JSON.parse(data);
         for(var i =0; i< data.length;i++){
            document.getElementsByClassName("github-list")[0].innerHTML +=   
-           `<li><a href="`+data[i].html_url+`"><strong>`+data[i].name+`</strong></a></li>`;
+           `<li><a href="`+data[i].html_url+`" target="_blank"><strong>`+data[i].name+`</strong></a></li>`;
         }
     }
 

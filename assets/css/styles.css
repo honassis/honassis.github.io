@@ -64,8 +64,11 @@ ul.repo-list {
     margin-bottom: 30px;
     display: grid;
 }
-
-ul.repo-list li {
+ul.repo-list a{
+    text-decoration: none;
+    text-decoration-color: none;
+}
+ul.repo-list li a{
     display: flex;
     flex-direction: column;
 }
@@ -78,13 +81,13 @@ ul.repo-list li img {
 }
 
 li strong {
-    font-size: 24px;
+    font-size: 22px;
     color: #444;
 }
 
 ul.repo-list li span {
     font-size: 12px;
-    color: #999;
+    color: #504c4c;
    
 }
 ul.github-list{
@@ -95,6 +98,7 @@ ul.github-list{
 ul.github-list strong{
   margin: 0 auto;
 }
+
 ul.github-list li strong{
     white-space: nowrap;
     overflow: hidden;
@@ -102,4 +106,35 @@ ul.github-list li strong{
     margin-top: 7%;
     max-width: 75ch;
     
+}
+.breve{
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+  
+}
+
+.socials{
+    display:flex;
+    font-size: 3.5em;
+    list-style: none;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+.socials a{
+    text-decoration: none;
+    padding: 4.4%;
+    transition: .5s;
+}
+.socials a:hover{
+    text-decoration: none;
+    padding: 4.4%;
+    margin-top: -10px;
+    transition: .5s;
+}
+.credits{
+    text-align: center;
+    margin-top: 10px;
+    position: absolute;
+    font-size: 13px;
 }
