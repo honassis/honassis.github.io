@@ -1,7 +1,7 @@
 var repos = new XMLHttpRequest();
 
-repos.open("GET", "https://api.github.com/users/honassis/repos", true);
-repos.send();
+//repos.open("GET", "https://api.github.com/users/honassis/repos", true);
+//repos.send();
 repos.onreadystatechange = function() {
   
 	if (repos.readyState == 4 && repos.status == 200) {

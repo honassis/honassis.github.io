@@ -15,18 +15,49 @@ button {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
-.logo{
-    width: 90%;
-    margin: 0 auto;
-}
-.container {
+a .logo{
     margin: 80px auto 0;
     max-width: 450px;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
 }
+.logo{
+    width: 90%;
+    margin: 0 auto;
+}
+.github{
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+}
+.gitlink{
+    color:black;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    display: block !important;
+}
+
+.container {
+    flex-direction: column; 
+    /* align-items: center; */
+    grid-template-columns: 1fr 1fr;
+   
+    grid-gap: 20px;
+
+    /* margin-bottom: 30px; */
+    display: grid;
+    padding: 20px;
+}
+
+  
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 450px) {
+    .container {
+     display: flex;
+    }
+  }
 .container a{
     display: flex;
 }
@@ -37,6 +68,8 @@ button {
     margin-top: 50px;
     border-radius: 4px;
     padding: 30px;
+    animation-name: intro;
+    animation-duration: 1.5s;
 }  
 .content button.btn {
     border: 0;
@@ -71,6 +104,14 @@ ul.repo-list a{
 ul.repo-list li a{
     display: flex;
     flex-direction: column;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    transition: .2s;
+
+}
+ul.repo-list li a:hover{
+    transition: .2s;
+    transform: scale(1.09);
 }
 
 ul.repo-list li img {
@@ -114,17 +155,20 @@ ul.github-list li strong{
 }
 
 .socials{
-    display:flex;
-    font-size: 3.5em;
+    display:grid;
+    font-size: 2.7em;
     list-style: none;
     width: 100%;
     margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     
 }
 .socials a{
     text-decoration: none;
-    padding: 4.4%;
     transition: .5s;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .socials a:hover{
     text-decoration: none;
@@ -137,4 +181,24 @@ ul.github-list li strong{
     margin-top: 10px;
     position: absolute;
     font-size: 13px;
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: scale(0.1);
+    }to{
+        opacity: 1;
+        transform: scale(1);
+
+    }
+}
+@keyframes intro{
+    from{
+        opacity: 0;
+        transform: translateY(200%);
+    }to{
+        opacity: 1;
+        transform: translateY(0%);
+
+    }
 }
