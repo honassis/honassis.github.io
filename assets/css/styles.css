@@ -21,6 +21,12 @@ a .logo{
     width: 100%;
     display: flex;
 }
+.desc{
+    font-size:1.5em;
+}
+.up{
+    margin-top: 20px;
+}
 .logo{
     width: 90%;
     margin: 0 auto;
