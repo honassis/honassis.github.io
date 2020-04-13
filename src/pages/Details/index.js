@@ -3,15 +3,43 @@ import { Link, useParams } from "react-router-dom";
 import Projects from "../Projects.json";
 import './styles.css';
 import { IoMdArrowRoundBack } from "react-icons/io";
+import GooglePlay from '../../assets/playstore.svg';
+import AppStore from '../../assets/appstore.svg';
+import GitHub from '../../assets/github.svg';
+import Expo from '../../assets/expo.svg';
+import Internet from '../../assets/internet.svg';
+import Interweave from 'interweave';
 
 export default function Details() {
     let { slug } = useParams();
-    function isBigEnough(value) {
+    function searchItem(value) {
         return value.slug == slug;
     }
-    const Work = Projects.filter(isBigEnough)[0];
-    const item = Work;
-    console.log(Work);
+    const item = Projects.filter(searchItem)[0];
+    const otherlinks = item.links==null ? [] : item.links;
+    function LinksApp(){
+        var Links = "";
+        Links += item.playstore!=null ? `<a href="${item.playstore}" target="_blank">
+        <img src="${GooglePlay}"/>
+        Abrir Playstore</a>` : ``; 
+        Links += item.appstore!=null ? `<a href="${item.appstore}" target="_blank">
+        <img src="${AppStore}"/>
+        Abrir AppStore</a>` : ``; 
+        Links += item.github!=null ? `<a href="${item.github}" target="_blank">
+        <img src="${GitHub}"/>
+        Abrir GitHub</a>` : ``;  
+        Links += item.expo!=null ? `<a href="${item.expo}" target="_blank">
+        <img src="${Expo}"/>
+        Abrir Expo</a>` : ``; 
+        Links += item.preview!=null ? `<a href="${item.preview}" target="_blank">
+        <img src="${Internet}"/>
+        Abrir Website</a>` : ``; 
+        return (
+            <Interweave content={Links} />
+        );
+    }
+  
+   
 
     return (
         <section className="details ">
@@ -28,26 +56,28 @@ export default function Details() {
                     <div className="header-info">
                         <h1>{item.name}</h1>
                         <ul className="techs">
-                            <li>Teste</li>
-                            <li>Teste</li>
-                            <li>Teste</li>
-                            <li>Teste</li>
-                            <li>Teste</li>
-                            <li>Teste</li>
+                        {item.techs.map(tech => (
+                            <li>
+                            {tech}
+                            </li>
+                        ))}
                         </ul>
                     </div>
                     <div className="links">
-                    <a href="#">Teste</a>
-                    <a href="#">Teste</a>
-                    <a href="#">Teste</a>
-                    <a href="#">Teste</a>
-                    <a href="#">Teste</a>
-                            </div>
+                            <LinksApp/>
+                    </div>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae velit libero. In elementum tellus eget convallis venenatis. Morbi ut vestibulum lacus, at pretium enim. Fusce a lorem lobortis quam rhoncus hendrerit. Pellentesque ornare dolor urna, ac faucibus massa sollicitudin posuere. Duis ligula ligula, laoreet quis massa sit amet, consectetur tristique purus. Donec hendrerit ex at dignissim facilisis. Morbi et dignissim enim, nec semper leo.
-    </p>
-
+                    {item.description}
+                   </p>
+    {otherlinks.map(link => (
+                           <a className="other-links" href={link[1]} target="_blank">
+                            <h2>
+                               {link[0]}
+                            </h2>
+                           </a>
+                            
+                        ))}
             </div>
         </section>
     )

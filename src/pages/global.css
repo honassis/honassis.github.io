@@ -10,6 +10,8 @@ body {
     font: 400 14px Roboto, sans-serif;
     background: #7159c1;
     -webkit-font-smoothing: antialiased;
+    
+    overflow-y: hidden;
 }
 
 input, button, textarea {
@@ -52,9 +54,10 @@ button {
     grid-row-gap: 0px;
     width: 100%;
     height: 70vh;
-    background: #7159c1;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    background-color: white;
+
 }
 
 .profile {
@@ -64,6 +67,10 @@ button {
     text-align: center;
     color: white;
     font-weight: 500;
+    z-index: 2;
+    background: #7159c1;
+
+
 }
 
 .profile img {
@@ -89,7 +96,7 @@ button {
 
 .profile .socials a:hover svg {
     transform: scale(1.4);
-    transition: .2s;
+  
 }
 
 .techs {
@@ -100,3 +107,30 @@ button {
     font-weight: 500;
 }
 
+@keyframes intro{
+    from{
+        opacity: 0;
+        transform: translate(50%);
+       
+    }to{
+        opacity: 1;
+        transform: translateX(0%);
+      
+
+
+    }
+}
+@keyframes projects{
+    from{
+        opacity: 0;
+    
+       
+       
+    }to{
+        opacity: 1;
+     
+      
+
+
+    }
+}
