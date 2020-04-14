@@ -10,23 +10,23 @@ import {
 export default function Routes(){
     return (
             <section className="profile">
-              <img src={profileImg} />
+              <img src={profileImg} alt="Honassis Lopes"/>
               <h2>Honassis Lopes</h2>
               <h3>Desenvolvedor FullStack</h3>
               <div className="socials">
-              <a href="https://www.instagram.com/hopz.js" target="_blank">
+              <a href="https://www.instagram.com/hopz.js" target="_blank" rel="noopener noreferrer">
               <FaInstagram size={20} color="#e30c57" />
             </a>
-            <a href="https://api.whatsapp.com/send?phone=5585985377813&text=Ol%C3%A1%20Honassis%2C%20vi%20seu%20portif%C3%B3lio%20no%20github" target="_blank">
+            <a href="https://api.whatsapp.com/send?phone=5585985377813&text=Ol%C3%A1%20Honassis%2C%20vi%20seu%20portif%C3%B3lio%20no%20github" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp size={20} color="#1ea72c" />
             </a>
-            <a href="https://github.com/honassis" target="_blank">
+            <a href="https://github.com/honassis" target="_blank" rel="noopener noreferrer">
               <FaGithub size={20} color="#000000" />
             </a>
-            <a href="mailto:honassislopes@gmail.com" target="_blank">
+            <a href="mailto:honassislopes@gmail.com" target="_blank" rel="noopener noreferrer">
               <MdEmail size={20} color="#923f3f" />
             </a>
-            <a href="https://www.linkedin.com/in/honassis/" target="_blank">
+            <a href="https://www.linkedin.com/in/honassis/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin size={20} color="#0077b5" />
             </a>
               </div>

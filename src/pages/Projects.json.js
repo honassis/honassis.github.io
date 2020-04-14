@@ -9,7 +9,7 @@ const Projects = [{
     playstore: "https://play.google.com/store/apps/details?id=app.superconsole.android5c5af37c16017",
     appstore: "https://apps.apple.com/br/app/auto-giro-r%C3%A1pido/id1491264492",
     techs: ["SiberianCMS","PHP", "HTML","Javascript","CSS", "Boostrap"],
-    preview: "https://autogirorapido.com.br/",
+    preview: "https://autogirorapido.com.br/"
 
 },
 {
@@ -19,7 +19,7 @@ const Projects = [{
     diário em PDFs, gerenciamento de produtos, etc. Sistema desenvolvido via Freela com RedTagMobile`,
     logo: "https://i.imgur.com/n6e87G4.png",
     playstore: "https://play.google.com/store/apps/details?id=app.superconsole.android5cab8c6a9c602",
-    techs: ["Siberian","PHP", "Javascript", "Boostrap"],
+    techs: ["Siberian","PHP", "Javascript", "Boostrap"]
 
 
 },
@@ -32,7 +32,7 @@ const Projects = [{
     playstore: "https://play.google.com/store/apps/details?id=app.superconsole.android5e4bd757e8c1f",
     appstore: "https://apps.apple.com/br/app/auto-giro-r%C3%A1pido/id1491264492",
     techs: ["Siberian","PHP", "Javascript", "Boostrap"],
-    preview: "",
+    preview: ""
 
 },
 {
@@ -43,7 +43,7 @@ const Projects = [{
     organizando assim suas compras para não esquecer nada. Sistema desenvolvido via Freela com RedTagMobile`,
     logo: "https://i.imgur.com/zMarIzT.png",
     playstore: "https://play.google.com/store/apps/details?id=app.superconsole.android5c6423ee0fe1a",
-    techs: ["SiberianCMS","PHP", "JQuery", "SemanticUI"],
+    techs: ["SiberianCMS","PHP", "JQuery", "SemanticUI"]
 
 },
 {
@@ -54,7 +54,7 @@ const Projects = [{
     logo: "https://i.imgur.com/HwN50GD.png",
     playstore: "https://play.google.com/store/apps/details?id=app.superconsole.android5ce4412e227fd",
     appstore: "https://apps.apple.com/us/app/central-mobile/id1472545069",
-    techs: ["SiberianCMS","PHP", "Javascript", "Boostrap"],
+    techs: ["SiberianCMS","PHP", "Javascript", "Boostrap"]
 }, {
     name: 'Wellpet',
     slug: 'Wellpet',
@@ -64,7 +64,7 @@ const Projects = [{
     logo: "https://i.imgur.com/IydfLWb.png",
     playstore: "https://play.google.com/store/apps/details?id=app.superconsole.android5c6b12151da12",
     appstore: "https://apps.apple.com/br/app/wellpet-clinica/id1471394233",
-    techs: ["SiberianCMS","PHP", "JQuery", "Bootsrap"],
+    techs: ["SiberianCMS","PHP", "JQuery", "Bootsrap"]
 
 }, {
 
@@ -74,7 +74,7 @@ const Projects = [{
     logo: "https://i.imgur.com/OPob23L.png",
     github: "https://github.com/honassis/cras-frontend",
     preview: "https://honassis.github.io/cras-frontend/",
-    techs: ["HTML/CSS", "Javascript", "FrontEnd"],
+    techs: ["HTML/CSS", "Javascript", "FrontEnd"]
 
 },
 , {
@@ -84,7 +84,7 @@ const Projects = [{
     logo: "https://i.imgur.com/VGRVdZ2.png",
     github: "https://github.com/honassis/jogo-da-velha-em-javascript-puro",
     preview: "https://honassis.github.io/jogo-da-velha-em-javascript-puro/",
-    techs: ["HTML", "CSS", "Javascript"],
+    techs: ["HTML", "CSS", "Javascript"]
 
 },
 {
@@ -125,8 +125,8 @@ const Projects = [{
     ["Abrir Projeto BackEnd","https://github.com/honassis/aircnc-backend"],
     ["Abrir Projeto Mobile","https://github.com/honassis/aircnc-mobile"]]
 
-}
+},
 
-]
+];
 
 export default Projects;
