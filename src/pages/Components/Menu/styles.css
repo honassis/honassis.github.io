@@ -1,0 +1,21 @@
+.menu {
+    background: white;
+    height: 70vh;
+    border-radius: 8px 0 0 8px;
+    padding-right: 2px;
+    border-right: 1px solid black;
+}
+
+.menu ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 2px solid white;
+    transition:  .2s;
+}
+.menu ul li:hover, 
+.menu ul li .active{
+    border-bottom: 2px solid blue;
+}

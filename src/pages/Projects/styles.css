@@ -44,3 +44,13 @@
     font-size: 1.3em;
     color:black ;
 }
+@media only screen and (max-width: 1024px) {
+    /* Mobile */
+    .projects{
+        grid-template-columns: repeat(3, 1fr);
+    }    
+    .projects span{
+        height: 12.5em;
+        
+    }
+  }

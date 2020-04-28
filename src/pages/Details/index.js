@@ -16,30 +16,30 @@ export default function Details() {
         return value.slug === slug;
     }
     const item = Projects.filter(searchItem)[0];
-    const otherlinks = item.links==null ? [] : item.links;
-    function LinksApp(){
+    const otherlinks = item.links == null ? [] : item.links;
+    function LinksApp() {
         var Links = "";
-        Links += item.playstore!=null ? `<a href="${item.playstore}" target="_blank" rel="noopener noreferrer">
+        Links += item.playstore != null ? `<a href="${item.playstore}" target="_blank" rel="noopener noreferrer">
         <img src="${GooglePlay}"/>
-        Abrir Playstore</a>` : ``; 
-        Links += item.appstore!=null ? `<a href="${item.appstore}" target="_blank" rel="noopener noreferrer">
+        Abrir Playstore</a>` : ``;
+        Links += item.appstore != null ? `<a href="${item.appstore}" target="_blank" rel="noopener noreferrer">
         <img src="${AppStore}"/>
-        Abrir AppStore</a>` : ``; 
-        Links += item.github!=null ? `<a href="${item.github}" target="_blank" rel="noopener noreferrer">
+        Abrir AppStore</a>` : ``;
+        Links += item.github != null ? `<a href="${item.github}" target="_blank" rel="noopener noreferrer">
         <img src="${GitHub}"/>
-        Abrir GitHub</a>` : ``;  
-        Links += item.expo!=null ? `<a href="${item.expo}" target="_blank" rel="noopener noreferrer">
+        Abrir GitHub</a>` : ``;
+        Links += item.expo != null ? `<a href="${item.expo}" target="_blank" rel="noopener noreferrer">
         <img src="${Expo}"/>
-        Abrir Expo</a>` : ``; 
-        Links += item.preview!=null ? `<a href="${item.preview}" target="_blank" rel="noopener noreferrer">
+        Abrir Expo</a>` : ``;
+        Links += item.preview != null ? `<a href="${item.preview}" target="_blank" rel="noopener noreferrer">
         <img src="${Internet}"/>
-        Abrir Website</a>` : ``; 
+        Abrir Website</a>` : ``;
         return (
             <Interweave content={Links} />
         );
     }
-  
-   
+
+
 
     return (
         <section className="details ">
@@ -48,36 +48,37 @@ export default function Details() {
                     <IoMdArrowRoundBack /> Voltar
       </Link>
             </div>
-   
+
             <div className="project-content custom-scroll">
-            
+
                 <div className="info-project">
-                    <img src={item.logo} alt={item.name}/>
+                    <img src={item.logo} alt={item.name} />
                     <div className="header-info">
                         <h1>{item.name}</h1>
+                        <h2>{item.subinfo}</h2>
                         <ul className="techs">
-                        {item.techs.map(tech => (
-                            <li>
-                            {tech}
-                            </li>
-                        ))}
+                            {item.techs.map(tech => (
+                                <li>
+                                    {tech}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div className="links">
-                            <LinksApp/>
+                        <LinksApp />
                     </div>
                 </div>
                 <p>
                     {item.description}
-                   </p>
-    {otherlinks.map(link => (
-                           <a className="other-links" href={link[1]} target="_blank" rel="noopener noreferrer">
-                            <h2>
-                               {link[0]}
-                            </h2>
-                           </a>
-                            
-                        ))}
+                </p>
+                {otherlinks.map(link => (
+                    <a className="other-links" href={link[1]} target="_blank" rel="noopener noreferrer">
+                        <h2>
+                            {link[0]}
+                        </h2>
+                    </a>
+
+                ))}
             </div>
         </section>
     )
