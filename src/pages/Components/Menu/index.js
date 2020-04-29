@@ -18,7 +18,7 @@ export default function Menu() {
     function show_itens(itens){
         itens.forEach(item => {
             item.style.animation = "showitem 1s linear";
-            item.style.display = "block";
+            item.style.display = '';
         });
     }
     function View(Type){

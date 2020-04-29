@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
  
 export default function MyProjects() {
-  
+ 
   return (
     <section className="projects grid custom-scroll">
       {Projects.map(Project => (
@@ -22,5 +22,5 @@ export default function MyProjects() {
       ))}
     </section>
   )
-  
+
 }

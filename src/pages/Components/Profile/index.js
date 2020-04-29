@@ -11,8 +11,8 @@ export default function Profile() {
   return (
     <section className="profile">
       <img src={profileImg} alt="Honassis Lopes" />
-      <h2>Honassis Lopes</h2>
-      <h3>Desenvolvedor FullStack</h3>
+      <h1>Honassis Lopes</h1>
+      <h2>Desenvolvedor FullStack</h2>
       <h3>Entre em contato com alguma rede abaixo</h3>
       <div className="socials">
         <a href="https://www.instagram.com/honassisl" target="_blank" rel="noopener noreferrer">

@@ -15,6 +15,7 @@ export default function Details() {
     function searchItem(value) {
         return value.slug === slug;
     }
+   
     const item = Projects.filter(searchItem)[0];
     const otherlinks = item.links == null ? [] : item.links;
     function LinksApp() {

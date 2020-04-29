@@ -8,7 +8,7 @@ import Details from './pages/Details';
 
 
 export default function Routes(){
- 
+
     return (
       <BrowserRouter>
 

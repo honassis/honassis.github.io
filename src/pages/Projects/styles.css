@@ -21,6 +21,7 @@
    
     
 }
+
 .projects span:hover a .img{
     transform: translateY(-4%);
    
@@ -28,6 +29,9 @@
 }
 .projects span a{
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 .projects span a .img {
@@ -50,7 +54,15 @@
         grid-template-columns: repeat(3, 1fr);
     }    
     .projects span{
-        height: 12.5em;
-        
+        margin-bottom: 2em;
+        height: 9em;
+    }
+    .projects span h1{
+        display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+        text-overflow: ellipsis;
+        width:7em;
+        text-align: center;
     }
   }
