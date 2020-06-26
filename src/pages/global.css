@@ -76,7 +76,7 @@ button {
 .profile img {
     margin: 0 auto;
     margin-top: 1em;
-    max-height: 50%;
+    width: 80%;
     border-radius: 50%;
 }
 
